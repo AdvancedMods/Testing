@@ -14,85 +14,18 @@ import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 public class ClientPlayerTracker {
 
     @SubscribeEvent
-    public void onPlayerLoginEvent(PlayerLoggedInEvent event)
-    {
+    public void onPlayerLoginEvent(PlayerLoggedInEvent event) {
 
     }
 
     @SubscribeEvent
-    public void onPlayerLogoutEvent(PlayerLoggedOutEvent event)
-    {
+    public void onPlayerLogoutEvent(PlayerLoggedOutEvent event) {
 
     }
 
     @SubscribeEvent
-    public void onPlayerDimChangedEvent(PlayerChangedDimensionEvent event)
-    {
+    public void onPlayerDimChangedEvent(PlayerChangedDimensionEvent event) {
 
     }
 
 }
-    /*@Override
-    public void onPlayerLogin(EntityPlayer player) {
-
-        Testing.log.info("[CLIENT] Login...");
-        FMLLog.severe("Login...");
-        if (player.getGameProfile().getName().equals("Direwolf20")) {
-            Testing.log.info("Direwolf20 detected!");
-        }
-        else if (player.getGameProfile().getName().equals("Dennisbonke")) {
-            Testing.log.info("Member Dennisbonke of Advanced Mods detected!");
-        }
-        else if (player.getGameProfile().getName().equals("Zandor300")) {
-            Testing.log.info("Member Zandor300 of Advanced Mods detected!");
-        }
-        else {
-            Testing.log.warn("Not specified / Errored");
-            FMLLog.severe("Not specified / Errored");
-        }
-
-    }
-
-    @Override
-    public void onPlayerLogout(EntityPlayer player) {
-
-
-
-    }
-
-    @Override
-    public void onPlayerChangedDimension(EntityPlayer player) {
-
-
-
-    }
-
-    @Override
-    public void onPlayerRespawn(EntityPlayer player) {
-
-        if (player.getGameProfile().getName().equals("Direwolf20")) {
-            Testing.log.info("Direwolf20 detected!");
-        }
-        else if (player.getGameProfile().getName().equals("Dennisbonke")) {
-            Testing.log.info("Member Dennisbonke of Advanced Mods detected!");
-        }
-        else if (player.getGameProfile().getName().equals("Zandor300")) {
-            Testing.log.info("Member Zandor300 of Advanced Mods detected!");
-        }
-        else {
-            Testing.log.warn("Not specified / Errored");
-            FMLLog.severe("Not specified / Errored");
-        }
-
-    }
-
-    /*@SubscribeEvent
-    public void onPlayerLoginEvent(PlayerLoggedInEvent event)
-    {
-        onPlayerLogin(event.player);
-    }
-
-    public void onPlayerLogin(EntityPlayer player)
-    {
-        Testing.log.info("[CLIENT] Login...");
-    }*/
