@@ -7,8 +7,21 @@ package com.advancedmods.testing.stuff;
  * @author Dennis Bonke
  * @since 1.0
  */
-public class Stuff {
+/*public class Stuff {
+
+    @SubscribeEvent
+    public void onTick(PlayerTickEvent event)
+    {
+        if(event.phase == Phase.END && event.side == Side.SERVER)
+        {
+            tick(event.player);
+        }
+    }
+
+    public void tick(EntityPlayer player) {
 
 
 
-}
+    }
+
+}*/
