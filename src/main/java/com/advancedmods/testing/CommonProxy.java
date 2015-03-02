@@ -18,11 +18,20 @@ public class CommonProxy {
 
     }
 
+    /**
+     * Gets if the game is paused
+     * @return true if the game is paused
+     */
     public boolean isPaused()
     {
         return false;
     }
 
+    /**
+     * Gets how far a player can reach
+     * @param player
+     * @return reach
+     */
     public double getReach(EntityPlayer player)
     {
         if(player instanceof EntityPlayerMP)
@@ -42,6 +51,11 @@ public class CommonProxy {
         return (File) FMLInjectionData.data()[6];
     }
 
+    /**
+     * Gets the Player
+     * @param context
+     * @return the player
+     */
     public EntityPlayer getPlayer(MessageContext context)
     {
         return context.getServerHandler().playerEntity;
