@@ -29,11 +29,11 @@ public class CommonPlayerTracker {
     @SubscribeEvent
     public void onPlayerLoginEvent(PlayerLoggedInEvent event) {
 
-        onPlayerLogin(event.player);
+        onPlayerLoginMain(event.player);
 
     }
 
-    public void onPlayerLogin(EntityPlayer player) {
+    public void onPlayerLoginMain(EntityPlayer player) {
 
         onPlayerLoginChat(player);
         onPlayerLoginSideCheck(player);
