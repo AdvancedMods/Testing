@@ -5,6 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 
 /**
@@ -25,6 +26,11 @@ public class ClientPlayerTracker {
 
     @SubscribeEvent
     public void onPlayerDimChangedEvent(PlayerChangedDimensionEvent event) {
+
+    }
+
+    @SubscribeEvent
+    public void onPlayerRespawnEvent(PlayerRespawnEvent event) {
 
     }
 

@@ -7,6 +7,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerAboutToStartEvent;
 import net.minecraft.entity.player.EntityPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,8 +30,10 @@ public class Testing {
     public void preInit(FMLPreInitializationEvent event) {
 
         log.info("Starting PreInit...");
+        log.info("Loading Trackers...");
         FMLCommonHandler.instance().bus().register(new CommonPlayerTracker());
         proxy.loadTracker();
+        log.info("Trackers loaded");
         log.info("PreInit complete");
 
     }
@@ -48,6 +51,17 @@ public class Testing {
 
         log.info("Starting PostInit...");
         log.info("PostInit complete");
+
+    }
+
+    @Mod.EventHandler
+    public void serverStarting(FMLServerAboutToStartEvent event) {
+
+        if (event.getSide().isClient()) {
+            log.info("Integrated Server");
+        } else {
+            log.info("Dedicated Server");
+        }
 
     }
 
