@@ -8,7 +8,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerAboutToStartEvent;
-import net.minecraft.entity.player.EntityPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -25,7 +24,6 @@ public class Testing {
     public static final String name = "Testing";
     public static final String modid = "testing";
     public static final String version = "1.0";
-    public EntityPlayer player;
     public static Logger log = LogManager.getLogger("AMTesting");
     @SidedProxy(clientSide = "com.advancedmods.testing.ClientProxy", serverSide = "com.advancedmods.testing.CommonProxy")
     public static CommonProxy proxy;

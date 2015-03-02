@@ -64,9 +64,9 @@ public class CommonPlayerTracker {
             if (player.getGameProfile().getId().equals(UUID.fromString("bbb87dbe-690f-4205-bdc5-72ffb8ebc29d"))) {
                 Testing.log.info("Direwolf20 logged in!");
             } else if (player.getGameProfile().getId().equals(UUID.fromString("70bf2a19-271f-4adb-9ab1-b965fd7eb630"))) {
-                Testing.log.info("Member Dennisbonke of Advanced Mods logged in!");
+                Testing.log.info("Owner / Main dev Dennisbonke of Advanced Mods logged in!");
             } else if (player.getGameProfile().getId().equals(UUID.fromString("9cd2a682-d1a1-4b3f-8bf2-162bf6b11852"))) {
-                Testing.log.info("Member Zandor300 of Advanced Mods logged in!");
+                Testing.log.info("Owner / Artist Zandor300 of Advanced Mods logged in!");
             } else {
                 Testing.log.info("Not specified");
             }
