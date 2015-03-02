@@ -9,7 +9,12 @@ import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 
 /**
+ * Client Tracker for AMTesting
  * Created by Dennisbonke on 1-3-2015.
+ *
+ * @see com.advancedmods.testing.events.CommonPlayerTracker
+ * @author Dennis Bonke
+ * @since 1.0
  */
 @SideOnly(Side.CLIENT)
 public class ClientPlayerTracker {

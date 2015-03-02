@@ -11,7 +11,11 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.MinecraftForge;
 
 /**
+ * Common tracker for AMTesting
  * Created by Dennisbonke on 28-2-2015.
+ *
+ * @author Dennis Bonke
+ * @since 1.0
  */
 public class CommonPlayerTracker {
 

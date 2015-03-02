@@ -13,7 +13,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import java.io.File;
 
 /**
+ * Client Proxy for AMTesting
  * Created by Dennisbonke on 1-3-2015.
+ *
+ * @author Dennis Bonke
+ * @since 1.0
+ * @see com.advancedmods.testing.CommonProxy
  */
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {

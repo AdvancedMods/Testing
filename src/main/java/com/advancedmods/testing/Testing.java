@@ -13,7 +13,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
+ * Main class for AMTesting
  * Created by Dennisbonke on 28-2-2015.
+ *
+ * @author Dennis Bonke
+ * @since 1.0
  */
 @Mod(name = Testing.name, modid = Testing.modid, version = Testing.version, modLanguage = "java", canBeDeactivated = false)
 public class Testing {

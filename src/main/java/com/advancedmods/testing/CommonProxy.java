@@ -8,7 +8,11 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import java.io.File;
 
 /**
+ * Common Proxy for AMTesting
  * Created by Dennisbonke on 1-3-2015.
+ *
+ * @author Dennis Bonke
+ * @since 1.0
  */
 public class CommonProxy {
 
