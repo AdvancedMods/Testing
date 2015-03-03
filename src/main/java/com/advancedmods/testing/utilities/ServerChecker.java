@@ -22,33 +22,27 @@ public class ServerChecker {
 
             ServerType = EnumServerType.INTEGRATED;
 
-        }
-        else if (!FMLClientHandler.instance().getServer().isDedicatedServer()) {
+        } else if (!FMLClientHandler.instance().getServer().isDedicatedServer()) {
 
             ServerType = EnumServerType.INTEGRATED;
 
-        }
-        else if (!FMLServerHandler.instance().getServer().isDedicatedServer()) {
+        } else if (!FMLServerHandler.instance().getServer().isDedicatedServer()) {
 
             ServerType = EnumServerType.INTEGRATED;
 
-        }
-        else if (FMLServerHandler.instance().getServer().isDedicatedServer()) {
+        } else if (FMLServerHandler.instance().getServer().isDedicatedServer()) {
 
             ServerType = EnumServerType.DEDICATED;
 
-        }
-        else if (!Minecraft.getMinecraft().isSingleplayer()) {
+        } else if (!Minecraft.getMinecraft().isSingleplayer()) {
 
             ServerType = EnumServerType.DEDICATED;
 
-        }
-        else if (FMLClientHandler.instance().getServer().isDedicatedServer()) {
+        } else if (FMLClientHandler.instance().getServer().isDedicatedServer()) {
 
             ServerType = EnumServerType.DEDICATED;
 
-        }
-        else {
+        } else {
 
             ServerType = EnumServerType.UNKNOWN;
             FMLLog.bigWarning("Could not determine which server you are on!");

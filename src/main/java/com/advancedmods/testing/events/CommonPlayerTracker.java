@@ -57,13 +57,12 @@ public class CommonPlayerTracker {
             Testing.log.info("Integrated Server");
             ServerType = EnumServerType.INTEGRATED;
 
-        } else if (player.worldObj.isRemote){
+        } else if (player.worldObj.isRemote) {
 
             Testing.log.info("Dedicated Server");
             ServerType = EnumServerType.DEDICATED;
 
-        }
-        else {
+        } else {
 
             Testing.log.warn("Error checking Server Type!");
             ServerType = EnumServerType.UNKNOWN;

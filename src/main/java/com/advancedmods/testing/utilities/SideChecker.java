@@ -20,18 +20,15 @@ public class SideChecker {
 
             side = Side.CLIENT;
 
-        }
-        else if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
+        } else if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
 
             side = Side.CLIENT;
 
-        }
-        else if (FMLCommonHandler.instance().getSide() == Side.SERVER){
+        } else if (FMLCommonHandler.instance().getSide() == Side.SERVER) {
 
             side = Side.SERVER;
 
-        }
-        else {
+        } else {
 
             side = Side.SERVER;
 
