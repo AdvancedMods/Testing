@@ -4,7 +4,11 @@ import cpw.mods.fml.relauncher.Side;
 import net.minecraft.client.Minecraft;
 
 /**
+ * This will move to AMCore!
  * Created by Dennisbonke on 2-3-2015.
+ *
+ * @author Dennis Bonke
+ * @since 1.0
  */
 public class SideChecker {
 

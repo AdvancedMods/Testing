@@ -1,6 +1,7 @@
 package com.advancedmods.testing.events;
 
 import com.advancedmods.testing.Testing;
+import com.advancedmods.testing.utilities.EnumServerType;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
@@ -20,6 +21,8 @@ import java.util.UUID;
  * @since 1.0
  */
 public class CommonPlayerTracker {
+
+    private static Object ServerType;
 
     public CommonPlayerTracker()
     {
@@ -50,9 +53,21 @@ public class CommonPlayerTracker {
     public void onPlayerLoginSideCheck(EntityPlayer player) {
 
         if (!player.worldObj.isRemote) {
+
             Testing.log.info("Integrated Server");
-        } else {
+            ServerType = EnumServerType.INTEGRATED;
+
+        } else if (player.worldObj.isRemote){
+
             Testing.log.info("Dedicated Server");
+            ServerType = EnumServerType.DEDICATED;
+
+        }
+        else {
+
+            Testing.log.warn("Error checking Server Type!");
+            ServerType = EnumServerType.UNKNOWN;
+
         }
 
     }
