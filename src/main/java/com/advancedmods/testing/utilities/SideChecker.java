@@ -1,5 +1,6 @@
 package com.advancedmods.testing.utilities;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraft.client.Minecraft;
 
@@ -20,9 +21,14 @@ public class SideChecker {
             side = Side.CLIENT;
 
         }
-        else if (Minecraft.getMinecraft().isIntegratedServerRunning()) {
+        else if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
 
             side = Side.CLIENT;
+
+        }
+        else if (FMLCommonHandler.instance().getSide() == Side.SERVER){
+
+            side = Side.SERVER;
 
         }
         else {

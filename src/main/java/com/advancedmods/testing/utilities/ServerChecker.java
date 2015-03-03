@@ -1,6 +1,8 @@
 package com.advancedmods.testing.utilities;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLLog;
+import cpw.mods.fml.server.FMLServerHandler;
 import net.minecraft.client.Minecraft;
 
 /**
@@ -21,7 +23,27 @@ public class ServerChecker {
             ServerType = EnumServerType.INTEGRATED;
 
         }
+        else if (!FMLClientHandler.instance().getServer().isDedicatedServer()) {
+
+            ServerType = EnumServerType.INTEGRATED;
+
+        }
+        else if (!FMLServerHandler.instance().getServer().isDedicatedServer()) {
+
+            ServerType = EnumServerType.INTEGRATED;
+
+        }
+        else if (FMLServerHandler.instance().getServer().isDedicatedServer()) {
+
+            ServerType = EnumServerType.DEDICATED;
+
+        }
         else if (!Minecraft.getMinecraft().isSingleplayer()) {
+
+            ServerType = EnumServerType.DEDICATED;
+
+        }
+        else if (FMLClientHandler.instance().getServer().isDedicatedServer()) {
 
             ServerType = EnumServerType.DEDICATED;
 
